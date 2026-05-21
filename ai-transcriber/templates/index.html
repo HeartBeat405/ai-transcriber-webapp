@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Transcriber</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>AI Transcriber</h1>
+
+    <p class="subtitle">
+        Upload audio or video and get AI transcription instantly
+    </p>
+
+    <div class="upload-box">
+
+        <input type="file" id="audioFile">
+
+        <button onclick="uploadFile()">
+            Transcribe
+        </button>
+
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-container" id="progressContainer">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="progress-text" id="progressText"></div>
+
+    <!-- Result -->
+    <textarea
+        id="result"
+        placeholder="Transcript will appear here..."
+    ></textarea>
+
+    <button id="downloadBtn">
+        Download Transcript
+    </button>
+
+    <div class="watermark">
+        @Tandyono Robinson Project
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
